@@ -1,0 +1,36 @@
+= BBConf API Guide
+Mihaita Tinta;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[[overview]]
+= Overview
+
+[[resources]]
+= Resources
+
+
+[[resources-routes]]
+== Routes remote calls
+
+[[resources-users-get]]
+=== POST /api/routes/remote-call
+
+A `POST` request is used to call a remote service with a specified delay
+
+==== Request structure
+
+include::{snippets}/routing/http-request.adoc[]
+
+==== Example response
+
+include::{snippets}/routing/http-response.adoc[]
+
+==== CURL request
+
+include::{snippets}/routing/curl-request.adoc[]
+
