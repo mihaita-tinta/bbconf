@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 29 18:09:12 EET 2019
+https\://artifactory.ing.net/artifactory/releases_mvn_all/.error=Could not transfer artifact net.alchim31.maven\:scala-maven-plugin\:pom\:4.2.4 from/to snapshots (https\://artifactory.ing.net/artifactory/releases_mvn_all)\: artifactory.ing.net
+352b3d638fbc3915fce3d86afe7060478771f1ac@default-snapshots-https\://artifactory.ing.net/artifactory/releases_mvn_all/.lastUpdated=1572365352915
+352b3d638fbc3915fce3d86afe7060478771f1ac@default-central-https\://artifactory.ing.net/artifactory/releases_mvn_all/.lastUpdated=1572365352908

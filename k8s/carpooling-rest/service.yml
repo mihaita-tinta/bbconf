@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-load-balancer
+spec:
+  type: LoadBalancer
+  selector:
+   app: carpooling-rest
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      name: http

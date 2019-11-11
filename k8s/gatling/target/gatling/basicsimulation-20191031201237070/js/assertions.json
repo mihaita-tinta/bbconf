@@ -1,0 +1,10 @@
+{
+  "simulation": "computerdatabase.BasicSimulation",
+  "simulationId": "basicsimulation",
+  "start": 1572552757070,
+  "description": "",
+  "scenarios": ["BootLoadSimulation"],
+  "assertions": [
+
+  ]
+}

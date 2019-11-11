@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: carpooling-rest-blocking
+spec:
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/actuator/prometheus'
+      labels:
+        app: carpooling-rest-blocking
+    spec:
+      containers:
+        - name: carpooling-rest-blocking
+          image: commuting/carpooling-rest-blocking:0.1.1
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://mongo:27017/rest-blocking
+            - name: SERVER_PORT
+              value: "8080"
+            - name: JAVA_TOOL_OPTIONS
+              value: " -Xmx512m -Xms256m"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "perf"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "500m"
+            limits:
+              memory: "512Mi"
+              cpu: "1"
+          ports:
+            - name: web
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: web
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: web
+            initialDelaySeconds: 90
