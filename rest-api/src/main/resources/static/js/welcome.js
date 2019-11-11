@@ -1,51 +1,5 @@
 var markers = {};
 var map;
-var user;
-var socket;
-var firstMarker = true;
-
-function moveMarker(p) {
-    var id = p.id;
-    var lat = p.lat;
-    var lng = p.lng;
-
-    if (p.type == 'update') {
-        if (markers[id]) {
-            markers[id].setLatLng(new L.LatLng(lat, lng));
-            firstMarker = false;
-        } else {
-
-            newMarker(id, lat, lng);
-        }
-
-        if (firstMarker == true) {
-            markers[id].setLatLng(new L.LatLng(lat, lng)).update();
-        }
-    } else {
-
-        if (markers.hasOwnProperty(id)) {
-            map.removeLayer(markers[id])
-        }
-    }
-
-};
-
-
-function connect() {
-    console.log('connect');
-    var url = "ws://" + window.location.hostname + ":" + window.location.port + "/api/websocket";
-    socket = new WebSocket(url);
-    socket.addEventListener('message', function (event) {
-        var p = JSON.parse(event.data).attributes;
-        moveMarker(p);
-    });
-}
-
-window.send = function () {
-    var value = document.getElementById("value").value;
-    socket.send(value);
-}
-
 
 function start() {
 
@@ -57,7 +11,6 @@ function start() {
             'BBConf ©',
         id: 'mapbox.streets'
     }).addTo(map);
-    connect();
 
 }
 
