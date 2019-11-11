@@ -27,8 +27,8 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class PublishSubscribeWebSocketHandlerTest {
-    private static final Logger log = LoggerFactory.getLogger(PublishSubscribeWebSocketHandlerTest.class);
+public class RoutingWebSocketHandlerTest {
+    private static final Logger log = LoggerFactory.getLogger(RoutingWebSocketHandlerTest.class);
     @LocalServerPort
     int port;
 

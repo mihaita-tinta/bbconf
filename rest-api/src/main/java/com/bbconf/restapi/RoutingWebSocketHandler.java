@@ -17,14 +17,14 @@ import reactor.core.publisher.Mono;
 import java.time.Duration;
 
 @Component
-public class PublishSubscribeWebSocketHandler implements WebSocketHandler {
-    private static final Logger log = LoggerFactory.getLogger(PublishSubscribeWebSocketHandler.class);
+public class RoutingWebSocketHandler implements WebSocketHandler {
+    private static final Logger log = LoggerFactory.getLogger(RoutingWebSocketHandler.class);
 
     private final ObjectMapper mapper = new ObjectMapper();
     private final RouteService routeService;
 
     @Autowired
-    public PublishSubscribeWebSocketHandler(RouteService routeService) {
+    public RoutingWebSocketHandler(RouteService routeService) {
         this.routeService = routeService;
     }
 
