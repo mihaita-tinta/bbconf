@@ -11,6 +11,23 @@ public class RestApiApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+//        BlockHound.install(new BlockHoundIntegration() {
+//
+//            @Override
+//            public void applyTo(BlockHound.Builder builder) {
+//                builder.allowBlockingCallsInside(
+//                        "java.util.UUID",
+//                        "randomUUID");
+//
+//                builder.allowBlockingCallsInside(
+//                        "ch.qos.logback.classic.Logger",
+//                        "buildLoggingEventAndAppend");
+//            }
+//
+//        });
+//        ReactorDebugAgent.init();
+//        ReactorDebugAgent.processExistingClasses();
 	}
 
 }
