@@ -26,6 +26,7 @@
         <dependency>
             <groupId>org.springframework.restdocs</groupId>
             <artifactId>spring-restdocs-webtestclient</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,18 +41,21 @@
         <dependency>
             <groupId>io.projectreactor.addons</groupId>
             <artifactId>reactor-extra</artifactId>
+            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.projectreactor.tools/blockhound -->
         <dependency>
             <groupId>io.projectreactor.tools</groupId>
             <artifactId>blockhound</artifactId>
             <version>1.0.1.RELEASE</version>
+            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.projectreactor/reactor-tools -->
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-tools</artifactId>
             <version>3.3.0.RELEASE</version>
+            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
         <dependency>
