@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: carpooling-rest
-          image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.6-reactive
+          image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.7-reactive
           #image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.3-blocking
           env:
             - name: SPRING_DATA_MONGODB_URI

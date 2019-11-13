@@ -16,10 +16,94 @@
   "editable": true,
   "gnetId": 5373,
   "graphTooltip": 0,
-  "id": 1,
-  "iteration": 1573478871148,
+  "iteration": 1573550420266,
   "links": [],
   "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 36,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "jvm_memory_used_bytes/(1024*1024)",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "JVM Memory",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
     {
       "aliasColors": {},
       "bars": false,
@@ -32,7 +116,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 8
       },
       "id": 28,
       "legend": {
@@ -129,7 +213,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 8
       },
       "id": 30,
       "legend": {
@@ -221,7 +305,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 15
       },
       "id": 2,
       "panels": [],
@@ -251,7 +335,7 @@
         "h": 4,
         "w": 2,
         "x": 0,
-        "y": 8
+        "y": 16
       },
       "id": 4,
       "interval": null,
@@ -332,7 +416,7 @@
         "h": 8,
         "w": 22,
         "x": 2,
-        "y": 8
+        "y": 16
       },
       "id": 10,
       "legend": {
@@ -432,7 +516,7 @@
         "h": 4,
         "w": 2,
         "x": 0,
-        "y": 12
+        "y": 20
       },
       "id": 18,
       "interval": null,
@@ -503,7 +587,7 @@
         "h": 6,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 24
       },
       "id": 12,
       "legend": {
@@ -595,7 +679,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 22
+        "y": 30
       },
       "id": 33,
       "legend": {
@@ -680,7 +764,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 38
       },
       "id": 32,
       "legend": {
@@ -765,7 +849,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 38
+        "y": 46
       },
       "id": 34,
       "legend": {
@@ -847,7 +931,7 @@
       }
     }
   ],
-  "refresh": "5s",
+  "refresh": "",
   "schemaVersion": 20,
   "style": "dark",
   "tags": [],
@@ -881,7 +965,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-3m",
     "to": "now"
   },
   "timepicker": {
@@ -912,5 +996,5 @@
   "timezone": "",
   "title": "Micrometer Spring Throughput",
   "uid": "twqdYjziz",
-  "version": 3
+  "version": 1
 }
