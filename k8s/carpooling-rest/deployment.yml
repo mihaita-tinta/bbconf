@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: carpooling-rest
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: carpooling-rest
   template:
     metadata:
       annotations:
@@ -14,7 +17,7 @@ spec:
     spec:
       containers:
         - name: carpooling-rest
-          image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.7-reactive
+          image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.8-reactive
           #image: registry.gitlab.com/tech-commuting/carpooling-rest:0.0.3-blocking
           env:
             - name: SPRING_DATA_MONGODB_URI
