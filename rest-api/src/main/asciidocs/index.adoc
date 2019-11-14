@@ -17,20 +17,20 @@ Mihaita Tinta;
 [[resources-routes]]
 == Routes remote calls
 
-[[resources-users-get]]
-=== POST /api/routes/remote-call
+[[resources-trigger-get]]
+=== POST /trigger
 
 A `POST` request is used to call a remote service with a specified delay
 
 ==== Request structure
 
-include::{snippets}/routing/http-request.adoc[]
+include::{snippets}/trigger/http-request.adoc[]
 
 ==== Example response
 
-include::{snippets}/routing/http-response.adoc[]
+include::{snippets}/trigger/http-response.adoc[]
 
 ==== CURL request
 
-include::{snippets}/routing/curl-request.adoc[]
+include::{snippets}/trigger/curl-request.adoc[]
 

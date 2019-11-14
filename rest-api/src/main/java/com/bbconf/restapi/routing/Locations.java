@@ -2,6 +2,7 @@ package com.bbconf.restapi.routing;
 
 public interface Locations {
     String BBCONF = "44.5065009,26.0880662";
+    String SAMPLE_FROM = "44.4408816,26.048846";
 
     String[][] ATTRACTIONS = new String[][] {
 
