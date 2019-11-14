@@ -1,5 +1,6 @@
 var markers = {};
 var map;
+var ws;
 
 function start() {
 
