@@ -2,6 +2,10 @@ var markers = {};
 var map;
 var ws;
 
+function moveMarker(id, lat, lng) {
+    markers[id].setLatLng(new L.LatLng(lat, lng)).update();
+}
+
 function start() {
 
     map = L.map('mapid').setView([44.4306476, 26.0519227], 13);
@@ -13,6 +17,15 @@ function start() {
         id: 'mapbox.streets'
     }).addTo(map);
 
+    ws = new WebSocket('ws://localhost:8080/api/websocket');
+    ws.onmessage = function (ev) {
+        var json = JSON.parse(ev.data).attributes;
+        if (markers[json.id]) {
+            moveMarker(json.id, json.lat, json.lng);
+        } else {
+            newMarker(json.id, json.lat, json.lng);
+        }
+    }
 }
 
 function buildIcon(myCustomColour) {
